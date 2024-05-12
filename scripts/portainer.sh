@@ -20,10 +20,9 @@ docker run -d -p 8001:8000 -p 9443:9443 --name portainer --restart=always -v /va
 
 curl -fsSL https://code-server.dev/install.sh | sh
 
-cd /root/.config/code-server
-rm -rf config.yaml
+rm -rf /root/.config/code-server/config.yaml
 
-printf "bind-addr: 0.0.0.0:8080\nauth: password\npassword: Amjadali@2021\ncert: false\n" > config.yaml
+printf "bind-addr: 0.0.0.0:8080\nauth: password\npassword: Amjadali@2021\ncert: false\n" > /root/.config/code-server/config.yaml
 
 
 ###installation of cloudpanel
