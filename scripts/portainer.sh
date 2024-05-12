@@ -22,6 +22,10 @@ curl -fsSL https://code-server.dev/install.sh | sh
 
 sudo systemctl enable --now code-server@$USER
 
+echo "Waiting for 10 seconds..."
+sleep 10
+
+
 rm -rf /root/.config/code-server/config.yaml
 
 touch /root/.config/code-server/config.yaml
