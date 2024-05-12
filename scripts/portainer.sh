@@ -3,16 +3,16 @@
 # You need to run this script with root privilages.
 
 #Script tested on ubuntu 22.04 
-echo "Script tested on ubuntu 22.04 "
+echo "##########################           Script tested on ubuntu 22.04#                ################################### "
 
 
 # updating the packages and upgrading, installing docker, python and docker-compose
-echo "updating the packages and upgrading, installing docker, python and docker-compose"
+echo "####################       Updating the packages and upgrading, installing docker, python and docker-compose         #########################"
 
 apt update -y && apt upgrade -y && apt install docker.io  python3-pip -y && pip install docker-compose
 ##Installation of Selfhostedpro yacht
 
-echo"Installation of Selfhostedpro yacht"
+echo"#################         Installation of Selfhostedpro yacht            ##########################"
 
 docker volume create yacht
 docker run -d -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock -v yacht:/config --name yacht --restart unless-stopped selfhostedpro/yacht
