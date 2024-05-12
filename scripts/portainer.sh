@@ -20,7 +20,7 @@ docker run -d -p 8001:8000 -p 9443:9443 --name portainer --restart=always -v /va
 
 curl -fsSL https://code-server.dev/install.sh | sh
 
-cd .config/code-server
+cd /root/.config/code-server
 rm -rf config.yaml
 
 printf "bind-addr: 0.0.0.0:8080\nauth: password\npassword: Amjadali@2021\ncert: false\n" > config.yaml
