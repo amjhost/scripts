@@ -25,6 +25,9 @@ touch /root/.config/code-server/config.yaml
 sudo systemctl enable --now code-server@$USER
 printf "bind-addr: 0.0.0.0:8080\nauth: password\npassword: Amjadali@2021\ncert: false\n" > /root/.config/code-server/config.yaml
 
+systemctl restart code-server@root.service 
+
+
 
 
 
