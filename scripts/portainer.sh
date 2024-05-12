@@ -16,6 +16,15 @@ docker run -d -p 8000:8000 -v /var/run/docker.sock:/var/run/docker.sock -v yacht
 
 docker volume create portainer_data
 docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest
+### Automatic Installation of code-server
+
+curl -fsSL https://code-server.dev/install.sh | sh
+
+cd .config/code-server
+rm -rf config.yaml
+
+printf "bind-addr: 0.0.0.0:8080\nauth: password\npassword: Amjadali@2021\ncert: false\n" > config.yaml
+
 
 ###installation of cloudpanel
 
