@@ -3,7 +3,7 @@
 # You need to run this script with root privilages.
 
 #Script tested on ubuntu 22.04 
-echo "##########################Script tested on ubuntu 22.04#################################### "
+echo "##########################         Script tested on ubuntu 22.04             #################################### "
 
 
 # updating the packages and upgrading, installing docker, python and docker-compose
